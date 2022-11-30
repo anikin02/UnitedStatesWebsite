@@ -1,10 +1,517 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <title>США</title>
- </head>
- <body>
-    <h4><a href="mainPage.html">Вернуться на главную</a></h4>
-    <hr>
- </body>
+<head>
+<title>США</title>
+</head>
+<body>
+<h4><a href="mainPage.html">Вернуться на главную</a></h4>
+<hr>
+
+<details>
+  <summary>Грфик</summary>
+  <form>
+    <table>
+      <tbody><tr>
+        <th>Значениe по оси OX</th>
+        <th>Значениe по оси OY</th>
+      </tr>
+      <tr>
+        <td>
+          <input type="radio" name="ox" value="0">Год основания<br>
+          <input type="radio" name="ox" value="1">Население<br>
+          <input type="radio" name="ox" value="3">Территория<br>
+        </td>
+        <td>
+          <input type="checkbox" name="oy" value="0">Максимальная территория<br>
+          <input type="checkbox" name="oy" value="1">Минимальное население<br>
+          <input type="checkbox" name="oy" value="3">Количество парков штата<br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <input type="button" value="Построить">		
+ </form>
+</details>
+
+<details>
+  <summary>Фильтр</summary>
+  <form>
+    <p>
+      <label for="name">Название:</label>
+      <input type="text" name="name">
+    </p>
+    <p>
+      <label for="year">Год: </label>
+       от <input type="text" name="yearFrom"> до <input type="text" name="yearTo">
+    </p>
+    <p>
+      <label for="people">Население: </label>
+       от <input type="text" name="peopleFrom"> до <input type="text" name="peopleTo">
+    </p>
+    <p>
+      <label for="territorie">Территория: </label>
+       от <input type="text" name="territorieFrom"> до <input type="text" name="territorieTo">
+    </p>
+    <p>
+      <label for="parks">Парков штата: </label>
+       от <input type="text" name="parksFrom"> до <input type="text" name="parksTo">
+    </p>
+    <input type="button" value="Найти">		
+</form>
+</details>
+
+<details>
+  <summary>Сортировка</summary>
+  <form>
+	  <p>
+      Первый уровень:
+      <select name="sortFirst">
+        <option value="0">Нет</option>
+        <option value="1">Название</option>
+        <option value="2">Год основания</option>
+        <option value="3">Население</option>
+        <option value="4">Территория</option>
+        <option value="5">Столица</option>
+        <option value="6">Количество парков</option>
+      </select>
+    </p>  
+    <p>
+      Второй уровень:
+      <select name="sortSecond">
+        <option value="0">Нет</option>
+        <option value="1">Название</option>
+        <option value="2">Год основания</option>
+        <option value="3">Население</option>
+        <option value="4">Территория</option>
+        <option value="5">Столица</option>
+        <option value="6">Количество парков</option>
+      </select>
+    </p>
+    <p>
+      Третий уровень:
+      <select name="sortThird">
+        <option value="0">Нет</option>
+        <option value="1">Название</option>
+        <option value="2">Год основания</option>
+        <option value="3">Население</option>
+        <option value="4">Территория</option>
+        <option value="5">Столица</option>
+        <option value="6">Количество парков</option>
+      </select>
+    </p>
+      <input type="button" value="Сортировать по возрастанию">
+      <input type="button" value="Сортировать по убыванию">	
+	</form>
+</details>
+
+<br>
+
+<table border="1" cellpadding="5">
+<tr>
+<th><strong>Название</strong></th>
+<th><strong>Год<br>основания</strong></th>
+<th><strong>Население</strong></th>
+<th><strong>Территория,<br>км</strong></th>
+<th><strong>Столица</strong></th>
+<th><strong>Количество<br>парков штата</strong></th>
+</tr>
+<tr>
+<td>Айдахо</td>
+<td>1890</td>
+<td>1634644</td>
+<td>216632</td>
+<td>Бойсе</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Айова</td>
+<td>1846</td>
+<td>3107126</td>
+<td>145743</td>
+<td>Де-Мойн</td>
+<td>83</td>
+</tr>
+<tr>
+<td>Алабама</td>
+<td>1819</td>
+<td>4849377</td>
+<td>135765</td>
+<td>Монтгомери</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Аляска</td>
+<td>1959</td>
+<td>736732</td>
+<td>1717854</td>
+<td>Джуно</td>
+<td>34</td>
+</tr>
+<tr>
+<td>Аризона</td>
+<td>11912</td>
+<td>6781684</td>
+<td>295254</td>
+<td>Финикс</td>
+<td>31</td>
+</tr>
+<tr>
+<td>Арканзас</td>
+<td>1836</td>
+<td>2966369</td>
+<td>137732</td>
+<td>Литл-Рок</td>
+<td>52</td>
+</tr>
+<tr>
+<td>Вайоминг</td>
+<td>1890
+<td>584153</td>
+<td>253348</td>
+<td>Шайенн</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Вашингтон</td>
+<td>1889</td>
+<td>7061830</td>
+<td>184827</td>
+<td>Олимпия</td>
+<td>124</td>
+</tr>
+<tr>
+<td>Вермонт</td>
+<td>1791</td>
+<td>626562</td>
+<td>24923</td>
+<td>Монтпилиер</td>
+<td>55</td>
+</tr>
+<tr>
+<td>Виргиния</td>
+<td>1788</td>
+<td>8326289</td>
+<td>110785</td>
+<td>Ричмонд</td>
+<td>41</td>
+</tr>
+<tr>
+<td>Висконсин</td>
+<td>1848</td>
+<td>5757564</td>
+<td>169639</td>
+<td>Мадисон</td>
+<td>66</td>
+</tr>
+<tr>
+<td>Гавайи</td>
+<td>1959</td>
+<td>1419561</td>
+<td>28311</td>
+<td>Гонолулу</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Делавэр</td>
+<td>1787</td>
+<td>935614</td>
+<td>6452</td>
+<td>Довер</td>
+<td>17</td>
+</tr>
+<tr>
+<td>Джорджия</td>
+<td>1788</td>
+<td>10097343</td>
+<td>153909</td>
+<td>Атланта</td>
+<td>50</td>
+</tr>
+<tr>
+<td>Западная Виргиния</td>
+<td>1863</td>
+<td>1850326</td>
+<td>62755</td>
+<td>Чарлстон</td>
+<td>35</td>
+</tr>
+<tr>
+<td>Иллинойс</td>
+<td>1818
+<td>12880580</td>
+<td>149998</td>
+<td>Спрингфилд</td>
+<td>309</td>
+</tr>
+<tr>
+<td>Индиана</td>
+<td>1816</td>
+<td>6596855</td>
+<td>94321</td>
+<td>Индианаполис</td>
+<td>24</td>
+</tr>
+<tr>
+<td>Калифорния</td>
+<td>1850</td>
+<td>38802500</td>
+<td>423970</td>
+<td>Сакраменто</td>
+<td>279</td>
+</tr>
+<tr>
+<td>Канзас</td>
+<td>1861</td>
+<td>2904021</td>
+<td>213096</td>
+<td>Топика</td>
+<td>28</td>
+</tr>
+<tr>
+<td>Кентукки</td>
+<td>1792</td>
+<td>4413457</td>
+<td>104659</td>
+<td>Франкфорт</td>
+<td>45</td>
+</tr>
+<tr>
+<td>Колорадо</td>
+<td>1876</td>
+<td>5355866</td>
+<td>269837</td>
+<td>Денвер</td>
+<td>42</td>
+</tr>
+<tr>
+<td>Коннектикут</td>
+<td>1788</td>
+<td>3596677</td>
+<td>14357</td>
+<td>Хартфорд</td>
+<td>139</td>
+</tr>
+<tr>
+<td>Луизиана</td>
+<td>1812</td>
+<td>4649676</td>
+<td>135382</td>
+<td>Батон-Руж</td>
+<td>38</td>
+</tr>
+<tr>
+<td>Массачусетс</td>
+<td>1788</td>
+<td>6745408</td>
+<td>27336</td>
+<td>Бостон</td>
+<td>150</td>
+</tr>
+<tr>
+<td>Миннесота</td>
+<td>1858</td>
+<td>5994079</td>
+<td>225181</td>
+<td>Сент-Пол</td>
+<td>66</td>
+</tr>
+<tr>
+<td>Миссисипи</td>
+<td>1817</td>
+<td>2978512</td>
+<td>125443</td>
+<td>Джэксон</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Миссури</td>
+<td>1821</td>
+<td>6063589</td>
+<td>180533</td>
+<td>Джефферсон-Сити</td>
+<td>92</td>
+</tr>
+<tr>
+<td>Мичиган</td>
+<td>1837</td>
+<td>9909877</td>
+<td>250493</td>
+<td>Лансинг</td>
+<td>103</td>
+</tr>
+<tr>
+<td>Монтана</td>
+<td>1889</td>
+<td>1023579</td>
+<td>381156</td>
+<td>Хелена</td>
+<td>55</td>
+</tr>
+<tr>
+<td>Мэн</td>
+<td>1820</td>
+<td>1330089</td>
+<td>91646</td>
+<td>Огаста</td>
+<td>32</td>
+</tr>
+<tr>
+<td>Мэриленд</td>
+<td>1788</td>
+<td>5976407</td>
+<td>32133</td>
+<td>Аннаполис</td>
+<td>54</td>
+</tr>
+<tr>
+<td>Небраска</td>
+<td>1867</td>
+<td>1881503</td>
+<td>200520</td>
+<td>Линкольн</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Невада</td>
+<td>1864</td>
+<td>2839099</td>
+<td>286367</td>
+<td>Карсон-Сити</td>
+<td>27</td>
+<tr>
+<td>Нью-Гэмпшир</td>
+<td>1788</td>
+<td>1326813</td>
+<td>24217</td>
+<td>Конкорд</td>
+<td>93</td>
+</tr>
+<tr>
+<td>Нью-Джерси</td>
+<td>1787</td>
+<td>8938175</td>
+<td>22608</td>
+<td>Трентон</td>
+<td>49</td>
+</tr>
+<tr>
+<td>Нью-Йорк</td>
+<td>1788</td>
+<td>19746227</td>
+<td>141300</td>
+<td>Олбани</td>
+<td>180</td>
+</tr>
+<tr>
+<td>Нью-Мексико</td>
+<td>1912</td>
+<td>2085572</td>
+<td>315194</td>
+<td>Санта-Фе</td>
+<td>35</td>
+</tr>
+<tr>
+<td>Огайо</td>
+<td>1803</td>
+<td>11594163</td>
+<td>116096</td>
+<td>Колумбус</td>
+<td>75</td>
+</tr>
+<tr>
+<td>Оклахома</td>
+<td>1907</td>
+<td>3878051</td>
+<td>181196</td>
+<td>Оклахома-Сити</td>
+<td>35</td>
+</tr>
+<tr>
+<td>Орегон</td>
+<td>1859</td>
+<td>3970239</td>
+<td>255026</td>
+<td>Сейлем</td>
+<td>361</td>
+</tr>
+<tr>
+<td>Пенсильвания</td>
+<td>1787</td>
+<td>12787209</td>
+<td>119283</td>
+<td>Гаррисберг</td>
+<td>124</td>
+</tr>
+<tr>
+<td>Род-Айленд</td>
+<td>1790</td>
+<td>1055173</td>
+<td>4002</td>
+<td>Провиденс</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Северная Дакота</td>
+<td>1889</td>
+<td>739482</td>
+<td>183272</td>
+<td>Бисмарк</td>
+<td>13</td>
+</tr>
+<tr>
+<td>Северная Каролина</td>
+<td>1789</td>
+<td>9943964</td>
+<td>139509</td>
+<td>Роли</td>
+<td>41</td>
+</tr>
+<tr>
+<td>Теннесси</td>
+<td>1796</td>
+<td>6549352</td>
+<td>109247</td>
+<td>Нашвилл</td>
+<td>56</td>
+</tr>
+<tr>
+<td>Техас</td>
+<td>1845</td>
+<td>26956958</td>
+<td>696241</td>
+<td>Остин</td>
+<td>89</td>
+</tr>
+<tr>
+<td>Флорида</td>
+<td>1845</td>
+<td>19893297</td>
+<td>170304</td>
+<td>Таллахасси</td>
+<td>175</td>
+</tr>
+<tr>
+<td>Южная Дакота</td>
+<td>1889</td>
+<td>853175</td>
+<td>199905</td>
+<td>Пирр</td>
+<td>63</td>
+</tr>
+<tr>
+<td>Южная Каролина</td>
+<td>1788</td>
+<td>4832882</td>
+<td>82931</td>
+<td>Колумбия</td>
+<td>47</td>
+<tr>
+<td>Юта</td>
+<td>1896</td>
+<td>2942902</td>
+<td>219887</td>
+<td>Солт-Лейк-Сити</td>
+<td>43</td>
+</tr>
+</body>
 </html>
